@@ -50,7 +50,7 @@ resource "aws_route_table" "lti_public_route_table" {
   vpc_id = aws_vpc.lti_vpc.id
 
   route {
-    cidr_block = "0.0.0.0"
+    cidr_block = "0.0.0.0/0"
     gateway_id = aws_internet_gateway.lti_igw.id
   }
 
@@ -83,7 +83,7 @@ resource "aws_route_table" "lti_private_route_table" {
   vpc_id = aws_vpc.lti_vpc.id
 
   route {
-    cidr_block = "0.0.0.0"
+    cidr_block = "0.0.0.0/0"
     nat_gateway_id = aws_nat_gateway.lti_nat_gateway.id
   }
 
