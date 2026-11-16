@@ -1,0 +1,30 @@
+Architecture Workflow
+1. GitHub – Source code management and version control for Terraform configurations.
+2. Terraform – Infrastructure as Code (IaC) to provision and manage the complete AWS cloud networking infrastructure.
+3. AWS VPC & Subnets – Custom virtual network isolating resources into a public web tier and a private application tier.
+4. Internet & NAT Gateways – Managing public internet entry and secure outbound-only traffic for private backend resources.
+5. Security Groups – Virtual firewalls enforcing strict inbound and outbound traffic rules across tiers.
+6. Amazon EC2 – Virtual machines hosting the public web server and private application server (`t3.micro`).
+
+Technologies Used
+- Cloud Platform: Amazon Web Services (AWS)
+- Infrastructure as Code: Terraform
+- Cloud Networking: AWS VPC, Public/Private Subnets, Internet Gateway, NAT Gateway, Route Tables
+- Compute: Amazon EC2 (Linux)
+- Security: AWS Security Groups
+- Version Control: Git and GitHub
+
+Project Overview
+This project demonstrates the deployment of a secure, 2-tier cloud network architecture on AWS using Terraform. 
+
+Terraform automates the provisioning of a custom VPC (`LTI_VPC`), separating workloads into public and private subnets. A public web server handles incoming user traffic via an Internet Gateway, while a private application server remains isolated, safely routing outbound requests through a NAT Gateway. Security groups enforce strict traffic control between network boundaries.
+
+The project demonstrates practical knowledge of cloud networking, Infrastructure as Code, multi-tier security isolation, and AWS resource management.
+
+Key Learning Outcomes
+- Automated AWS network infrastructure provisioning using Terraform.
+- Designed a secure 2-tier architecture featuring public and private subnets.
+- Configured Internet Gateways and NAT Gateways with custom Route Tables for controlled internet egress.
+- Implemented Security Groups for fine-grained traffic isolation and firewall protection.
+- Provisioned and placed EC2 instances across public and private tiers based on security requirements.
+- Managed project source code version control using Git and GitHub.
